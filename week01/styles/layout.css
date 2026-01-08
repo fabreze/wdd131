@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: auto 1fr auto;
+    margin: 0;
+}
+
+header {
+    background-color: dimgray;
+    color: white;
+    grid-column: 1 / 4;
+}
+
+header .title {
+    padding: 1rem;
+    margin-bottom: 4rem;
+}
+
+nav {
+    background-color: black;
+    display: flex;
+    padding: 1rem;
+    justify-content: space-between;
+}
+
+main {
+    background: darkgrey;
+    padding: 2rem;
+    grid-column: 1 / 3;
+}
+
+footer {
+    background: dimgray;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    padding-bottom: 4rem;
+    grid-column: 1 / 4;
+}
+
+aside {
+    padding: 1rem;
+}
