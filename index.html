@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nanum+Gothic&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
     <meta name="description" content="Fabrizio Caballero's BYU Dyanmic Web Fundamentals Home Page">
     <meta name="author" content="Fabrizio Caballero">
     <title>WDD 131 – Dynamic Web Fundamentals – Fabrizio Caballero</title>
@@ -19,20 +24,27 @@
     </header>
     <main>
         <h1>Fabrizio Caballero</h1>
-        <section class="card">
-            <h2>About Me</h2>
-            <img>
-            <p></p>
-        </section>
-        <section class="card">
-            <h2>UX/UI Resources</h2>
-            <img>
-            <p></p>
-        </section>
+        <div class="cards">
+            <section class="card">
+                <h2>About Me</h2>
+                <img src="images/fabrizio-caballero.jpg" alt="Smiling picture of me wearing headphones.">
+                <p>My name is <span>Fabrizio Caballero</span>, I am a UI/UX designer with focus on both mobile and web design. I have <span>4 years</span> of experience in the industry and specialize in refining the onboarding process for SaaS businesses.</p>
+            </section>
+            <section class="card">
+                <h2>UX/UI Resources</h2>
+                <img src="images/uiux-resources.jpg" alt="graphic of UX and UI work elements.">
+                <p>Here are some useful UI/UX Resources:</p>
+                <div class="resources">
+                    <a href="https://www.uxtools.co/challenges"><span>UX Tools - Challenges</span></a>
+                    <a href="https://www.w3.org/WAI/standards-guidelines/wcag/"><span>WCAG 2 Overview</span></a>
+                    <a href="https://designsprintx.com/crazy-8s-timer/"><span>Krazy 8s Timer</span></a>
+                </div>
+            </section>
+        </div>
     </main>
     <footer>
-        <p><span id="currentyear"></span> Fabrizio Caballero, Paraguay</p>
-        <p class="lastModified"></p>
+        <p><span id="currentYear"></span> Fabrizio Caballero, Paraguay</p>
+        <p id="lastModified"></p>
     </footer>
     
 </body>
