@@ -1,0 +1,69 @@
+header{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    align-items: center;
+    background-color: #2D3135 !important;
+    color: #EEF1F6;
+    padding: 0 1rem;
+}
+
+header p{
+    font-size: 1.5rem;
+}
+
+main{
+        display: grid;
+        grid-template-columns: 1fr;
+}
+
+.album{
+    gap: 3rem;
+}
+
+figure{
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+figure img{
+    max-width: 100%;
+}
+
+.navigation {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	list-style: none;
+	background-color: #2D3135;
+	color: #EEF1F6;
+}
+
+.navigation a {
+	display: none;
+}
+
+.navigation.open a {
+	display: block;
+}
+
+#menu {
+	font-size: 1.5rem;
+	border: 0;
+	background: none;
+	color: #EEF1F6;
+ 	position: relative;
+}
+
+#menu::before {
+	content: "☰";
+}
+
+#menu.open::before {
+	content: "X";
+}
+
+.open a {
+	display: flex;
+}

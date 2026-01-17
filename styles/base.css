@@ -87,6 +87,7 @@ nav{
     background-color: var(--color-inverseSurface);
     color: var(--color-inverseOnSurface);
     justify-content: space-between;
+    align-items: center;
     padding: 1rem;
 }
 
