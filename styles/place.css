@@ -1,0 +1,136 @@
+:root{
+    --color-primary: #2D628C;
+    --color-surfaceTint: #2D628C;
+    --color-onPrimary: #FFFFFF;
+    --color-primaryContainer: #CDE5FF;
+    --color-onPrimaryContainer: #0B4A72;
+    --color-secondary: #51606F;
+    --color-onSecondary: #FFFFFF;
+    --color-secondaryContainer: #D4E4F6;
+    --color-onSecondaryContainer: #3A4857;
+    --color-tertiary: #67587A;
+    --color-onTertiary: #FFFFFF;
+    --color-tertiaryContainer: #EEDCFF;
+    --color-onTertiaryContainer: #4F4061;
+    --color-error: #BA1A1A;
+    --color-onError: #FFFFFF;
+    --color-errorContainer: #FFDAD6;
+    --color-onErrorContainer: #93000A;
+    --color-background: #F7F9FF;
+    --color-onBackground: #181C20;
+    --color-surface: #F7F9FF;
+    --color-onSurface: #181C20;
+    --color-surfaceVariant: #DEE3EB;
+    --color-onSurfaceVariant: #42474E;
+    --color-outline: #72787F;
+    --color-outlineVariant: #C2C7CF;
+    --color-shadow: #000000;
+    --color-scrim: #000000;
+    --color-inverseSurface: #2D3135;
+    --color-inverseOnSurface: #EEF1F6;
+    --color-inversePrimary: #9ACBFA;
+    --color-primaryFixed: #CDE5FF;
+    --color-onPrimaryFixed: #001D32;
+    --color-primaryFixedDim: #9ACBFA;
+    --color-onPrimaryFixedVariant: #0B4A72;
+    --color-secondaryFixed: #D4E4F6;
+    --color-onSecondaryFixed: #0E1D2A;
+    --color-secondaryFixedDim: #B9C8DA;
+    --color-onSecondaryFixedVariant: #3A4857;
+    --color-tertiaryFixed: #EEDCFF;
+    --color-onTertiaryFixed: #221533;
+    --color-tertiaryFixedDim: #D2BFE7;
+    --color-onTertiaryFixedVariant: #4F4061;
+    --color-surfaceDim: #D8DADF;
+    --color-surfaceBright: #F7F9FF;
+    --color-surfaceContainerLowest: #FFFFFF;
+    --color-surfaceContainerLow: #F1F4F9;
+    --color-surfaceContainer: #ECEEF3;
+    --color-surfaceContainerHigh: #E6E8EE;
+    --color-surfaceContainerHighest: #E0E2E8;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nanum-gothic-regular {
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body{
+    font-family: "Nanum Gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: var(--color-surface);
+    color: var(--color-onSurface);
+}
+
+header{
+    text-align: center;
+    background: var(--color-primary);
+    color: var(--color-onPrimary);
+    padding: 1rem;
+}
+
+picture{
+    display: block;
+    margin: 2rem auto;
+    width: 100%;
+}
+
+picture img{
+    width: 100%;
+    height: auto;
+}
+
+.card{
+    width: 100%;
+    height: fit-content;
+    background-color: var(--color-surfaceContainer);
+    border-radius: 1rem;
+    box-shadow: 0 1px 10px var(--color-shadow);
+}
+
+.card h2{
+    padding: 0.5rem;
+    background-color: var(--color-primary);
+    color: var(--color-onPrimary);
+    border-radius: 1rem 1rem 0 0;
+    text-align: center;
+}
+
+#data {
+    position: absolute;
+    top: 10rem;
+    left: 2rem;
+    width: 100%;
+    max-width: 500px;
+}
+
+#weather {
+    position: absolute;
+    bottom: 10rem;
+    right: 2rem;
+    width: 100%;
+    max-width: 500px;
+}
+
+footer{
+    background-color: var(--color-primary);
+    color: var(--color-onPrimary);
+    padding: 2rem;
+    text-align: center;
+}
+
+#currentYear{
+    font-weight: 600;
+}
+
+.lastModified{
+    font-weight: 600;
+}
