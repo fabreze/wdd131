@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nanum+Gothic&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=clear_day" />
     <link rel="stylesheet" href="styles/place-large.css">
     <link rel="stylesheet" href="styles/place.css">
     <script src="scripts/getdates.js" defer></script>
@@ -20,11 +21,12 @@
     </header>
     <main>
        <picture>
-        <source srcset="images/place/paraguay-large.webp" media="(min-width: 1000px)">
+        <source srcset="images/place/paraguay-large.webp" media="(min-width: 1200px)">
         <img src="images/place/paraguay.webp" alt="Paraguay landscape">
        </picture>
        <section class="card" id="data">
             <h2>Data</h2>
+            <div class="card-info">
                 <p><span>Area:</span> 406,752 km²</p>
                 <p><span>Population:</span> 6,413,627</p>
                 <p><span>Capital:</span> Asunción</p>
@@ -32,11 +34,15 @@
                 <p><span>Currency:</span> Guarani(PYG)</p>
                 <p><span>Time Zone:</span> UTC-3:00</p>
                 <p><span>Calling Code:</span> +595</p>
+            </div>
        </section>
        <section class="card" id="weather">
-            <h2>Weather</h2>
-            <div id="weatherData">
-                <p>Loading weather data...</p>
+            <h2>Weather <span class="material-symbols-outlined">clear_day</span></h2>
+            <div class="card-info">
+                <p id="temperature"><span>Temperature:</span> 8°C</p>
+                <p><span>Conditions:</span> Sunny</p>
+                <p id="wind-speed"><span>Wind Speed:</span> 5 km/h</p>
+                <p id="windChill"><span>Wind Chill:</span></p>
             </div>
        </section>
     </main>
