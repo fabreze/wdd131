@@ -56,12 +56,16 @@
     box-sizing: border-box;
 }
 
+.icon{
+    display: none;
+}
+
 .material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
 }
 
 body{
@@ -91,18 +95,20 @@ picture img{
 }
 
 .card{
+    display: block;
     width: 100%;
     height: fit-content;
-    background-color: var(--color-surfaceContainer);
-    border-radius: 1rem;
-    box-shadow: 0 1px 10px var(--color-shadow);
+    background-color: var(--color-surface);
+    color: var(--color-onSurface);
+    border-radius: 0;
+    box-shadow: 0;
 }
 
 .card h2{
     padding: 0.5rem;
-    background-color: var(--color-primary);
-    color: var(--color-onPrimary);
-    border-radius: 1rem 1rem 0 0;
+    background-color: var(--color-surface);
+    color: var(--color-primary);
+    border-radius: 0;
     text-align: center;
 }
 
@@ -110,24 +116,18 @@ picture img{
     padding: 1rem;
 }
 
-.card-info span{
+.text-info{
+    display: flex;
+    width: 100%;
+}
+
+.text-info p{
+    text-align: left;
+    width: 100%;
+}
+
+.text-info .title{
     font-weight: 600;
-}
-
-#data {
-    position: absolute;
-    top: 10rem;
-    left: 2rem;
-    width: 100%;
-    max-width: 500px;
-}
-
-#weather {
-    position: absolute;
-    bottom: 0;
-    right: 2rem;
-    width: 100%;
-    max-width: 500px;
 }
 
 footer{
