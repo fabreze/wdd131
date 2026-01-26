@@ -56,10 +56,6 @@
     box-sizing: border-box;
 }
 
-.icon{
-    display: none;
-}
-
 .material-symbols-outlined {
     font-variation-settings:
         'FILL' 0,
@@ -105,11 +101,15 @@ picture img{
 }
 
 .card h2{
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
     background-color: var(--color-surface);
     color: var(--color-primary);
     border-radius: 0;
-    text-align: center;
+    text-align: left;
+}
+
+.material-symbols-outlined.icon {
+    display: none;
 }
 
 .card-info{

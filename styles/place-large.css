@@ -1,4 +1,4 @@
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1200px) {
     .card{
         width: 100%;
         height: fit-content;
@@ -29,7 +29,7 @@
         width: 100%;
         max-width: 500px;
     }
-    .icon{
-        display: inline;
+    .material-symbols-outlined.icon {
+        display: inline-block;
     }
 }
