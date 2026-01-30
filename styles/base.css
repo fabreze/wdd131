@@ -1,4 +1,4 @@
-:root{
+:root {
     --color-primary: #2D628C;
     --color-surfaceTint: #2D628C;
     --color-onPrimary: #FFFFFF;
@@ -50,19 +50,19 @@
     --color-surfaceContainerHighest: #E0E2E8;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 .nanum-gothic-regular {
-  font-family: "Nanum Gothic", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Nanum Gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
-body{
+body {
     font-family: "Nanum Gothic", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -70,11 +70,11 @@ body{
     color: var(--color-onSurface);
 }
 
-header{
+header {
     background: none;
 }
 
-#course-title{
+#course-title {
     display: block;
     text-align: center;
     padding: 1rem;
@@ -82,7 +82,7 @@ header{
     color: var(--color-onPrimary);
 }
 
-nav{
+nav {
     display: flex;
     background-color: var(--color-inverseSurface);
     color: var(--color-inverseOnSurface);
@@ -91,38 +91,38 @@ nav{
     padding: 1rem;
 }
 
-nav a{
+nav a {
     text-decoration: none;
 }
 
-nav a span{
+nav a span {
     color: var(--color-inverseOnSurface);
 }
 
-nav a span:hover{
+nav a span:hover {
     color: var(--color-primaryFixed);
     text-decoration: underline;
 }
 
-main{
+main {
     max-width: 80%;
     margin: auto;
     padding-bottom: 3rem;
 }
 
-main h1{
+main h1 {
     text-align: center;
     padding: 2rem;
 }
 
-.cards{
+.cards {
     display: grid;
     grid-template-columns: 2fr 1fr;
     width: 100%;
     gap: 1rem;
 }
 
-.card{
+.card {
     width: 100%;
     height: fit-content;
     background-color: var(--color-surfaceContainer);
@@ -130,7 +130,7 @@ main h1{
     box-shadow: 0 1px 10px var(--color-shadow);
 }
 
-.card h2{
+.card h2 {
     padding: 0.5rem;
     background-color: var(--color-primary);
     color: var(--color-onPrimary);
@@ -138,7 +138,7 @@ main h1{
     text-align: center;
 }
 
-.card img{
+.card img {
     width: 512px;
     padding: 1rem;
     height: auto;
@@ -146,46 +146,50 @@ main h1{
     clear: right;
 }
 
-.card p{
+.card p {
     padding: 1rem;
     width: 100%;
 }
 
-.card span{
+.card span {
     font-weight: 600;
 }
 
-.card .resources{
+.card .resources {
     display: grid;
     grid-template-rows: auto;
     padding: 0.5rem 1rem;
     gap: 1rem;
 }
 
-.card .resources a{
+.card .resources a {
     text-decoration: none;
 }
 
-.card .resources a span{
+.card .resources a span {
     color: var(--color-primary)
 }
 
-.card .resources a span:hover{
+.card .resources a span:hover {
     color: var(--color-onPrimaryContainer);
     text-decoration: underline;
 }
 
-footer{
+footer {
     background-color: var(--color-primary);
     color: var(--color-onPrimary);
     padding: 2rem;
     text-align: center;
 }
 
-#currentYear{
+#currentYear {
     font-weight: 600;
 }
 
-.lastModified{
+.lastModified {
     font-weight: 600;
+}
+
+svg {
+    display: none;
 }
