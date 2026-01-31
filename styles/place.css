@@ -1,4 +1,4 @@
-:root{
+:root {
     --color-primary: #2D628C;
     --color-surfaceTint: #2D628C;
     --color-onPrimary: #FFFFFF;
@@ -50,21 +50,17 @@
     --color-surfaceContainerHighest: #E0E2E8;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.material-symbols-outlined {
-    font-variation-settings:
-        'FILL' 0,
-        'wght' 400,
-        'GRAD' 0,
-        'opsz' 24
+h1::after {
+    content: " (🇵🇾)"
 }
 
-body{
+body {
     font-family: "Nanum Gothic", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -72,35 +68,35 @@ body{
     color: var(--color-onSurface);
 }
 
-header{
+header {
     text-align: center;
     background: var(--color-error);
     color: var(--color-onError);
     padding: 1rem;
 }
 
-picture{
+picture {
     display: block;
     width: 100%;
     height: auto;
 }
 
-picture img{
+picture img {
     width: 100%;
     height: auto;
 }
 
-.card{
+.card {
     display: block;
     width: 100%;
     height: fit-content;
     background-color: var(--color-surface);
     color: var(--color-onSurface);
     border-radius: 0;
-    box-shadow: 0;
+    box-shadow: none;
 }
 
-.card h2{
+.card h2 {
     padding: 0.5rem 1rem;
     background-color: var(--color-surface);
     color: var(--color-primary);
@@ -108,39 +104,35 @@ picture img{
     text-align: left;
 }
 
-.material-symbols-outlined.icon {
-    display: none;
-}
-
-.card-info{
+.card-info {
     padding: 1rem;
 }
 
-.text-info{
+.text-info {
     display: flex;
     width: 100%;
 }
 
-.text-info p{
+.text-info p {
     text-align: left;
     width: 100%;
 }
 
-.text-info .title{
+.text-info .title {
     font-weight: 600;
 }
 
-footer{
+footer {
     background-color: var(--color-primary);
     color: var(--color-onPrimary);
     padding: 2rem;
     text-align: center;
 }
 
-#currentYear{
+#currentYear {
     font-weight: 600;
 }
 
-.lastModified{
+.lastModified {
     font-weight: 600;
 }
