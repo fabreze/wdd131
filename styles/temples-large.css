@@ -1,21 +1,23 @@
-@media screen and (min-width: 500px) {
-    header{
+@media screen and (min-width: 1200px) {
+    header {
         grid-template-columns: 1fr 3fr;
     }
-    .album{
+
+    .album {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
     }
-    .navigation{
+
+    .navigation {
         display: flex;
         flex-direction: row;
     }
-    
+
     .navigation a {
         display: flex;
     }
 
-    #menu{
+    #menu {
         display: none;
     }
 }
