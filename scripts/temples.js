@@ -2,6 +2,12 @@ const hamButton = document.querySelector("#menu");
 const navigation = document.querySelector(".navigation");
 const album = document.querySelector(".album");
 
+const oldNav = document.querySelector("#old");
+const newNav = document.querySelector("#new");
+const largeNav = document.querySelector("#large");
+const smallNav = document.querySelector("#small");
+const homeNav = document.querySelector("#home");
+
 const temples = [
   {
     templeName: "Aba Nigeria",
@@ -62,7 +68,7 @@ const temples = [
   {
     templeName: "Asunción Paraguay",
     location: "Asunción, Paraguay",
-    dedicated: "20023, September, 17",
+    dedicated: "2002, September, 17",
     area: 25000,
     imageUrl:
       "https://churchofjesuschristtemples.org/assets/img/temples/brasilia-brazil-temple/brasilia-brazil-temple-39184-main.jpg"
@@ -86,6 +92,53 @@ const temples = [
 ];
 
 generateTemples(temples);
+
+function getSmallTemples(temples) {
+  let smallTemples = [];
+  temples.forEach(temple => {
+    if (temple['area'] <= 10000) {
+      smallTemples.push(temple)
+    }
+  })
+  return smallTemples;
+}
+
+function getLargeTemples(temples) {
+  let largeTemples = [];
+  temples.forEach(temple => {
+    if (temple['area'] >= 90000) {
+      largeTemples.push(temple)
+    }
+  })
+  return largeTemples;
+}
+
+function getOldTemples(temples) {
+  let oldTemples = [];
+  temples.forEach(temple => {
+    let year = getDateInt(temple['dedicated']);
+    if (year <= 1900) {
+      oldTemples.push(temple)
+    }
+  })
+  return oldTemples;
+}
+
+function getNewTemples(temples) {
+  let newTemples = [];
+  temples.forEach(temple => {
+    let year = getDateInt(temple['dedicated']);
+    if (year >= 2000) {
+      newTemples.push(temple)
+    }
+  })
+  return newTemples;
+}
+
+function getDateInt(stringDate) {
+  let year = stringDate.substring(0, 4);
+  return parseInt(year);
+}
 
 function generateTemples(temples) {
   temples.forEach(temple => {
@@ -123,6 +176,27 @@ hamButton.addEventListener("click", () => {
   hamButton.classList.toggle("open");
 });
 
-home.addEventListener("click", () => {
-  generateTemples();
+homeNav.addEventListener("click", () => {
+  album.innerHTML = "";
+  generateTemples(temples);
+});
+
+newNav.addEventListener("click", () => {
+  album.innerHTML = "";
+  generateTemples(getNewTemples(temples));
+});
+
+oldNav.addEventListener("click", () => {
+  album.innerHTML = "";
+  generateTemples(getOldTemples(temples));
+});
+
+largeNav.addEventListener("click", () => {
+  album.innerHTML = "";
+  generateTemples(getLargeTemples(temples));
+});
+
+smallNav.addEventListener("click", () => {
+  album.innerHTML = "";
+  generateTemples(getSmallTemples(temples));
 });
