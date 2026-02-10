@@ -9,17 +9,14 @@
     <script src="scripts/siteplan.js" defer></script>
     <title>Fabrizio Caballero - Site Plan</title>
 </head>
-<body>
-    <header>
-
-    </header>
+<body class="light">
     <main>
         <h1>Fabrizio Caballero</h1>
-        <section>
+        <section class="info-section">
             <h2>Purpose</h2>
             <p>Create a portfolio site for my services as a UX/UI Designer, show off my design portfolio, case studies and facilitate my contact information.</p>
         </section>
-        <section>
+        <section class="info-section">
             <h2>Scenarios</h2>
             <ul>
                 <li>Where can I find Fabrizio's portfolio?</li>
@@ -29,37 +26,36 @@
             </ul>
         </section>
         <section class="color-schema">
-            <h2>Color Schema</h2>
-            <h3>Light Color Schema</h3>
-            <div class="color-gallery" id="light-color-schema"></div>
-            <h3>Dark Color Schema</h3>
-            <div class="color-gallery" id="dark-color-schema"></div>
-            <p>Learn more information about Material 3's Color System here <a href="https://m3.material.io/styles/color/the-color-system">Material 3 Color System</a></p>
+            <section class="color-section">
+                <h2>Color Schema</h2>
+                <p>Learn more information about Material 3's Color System here: <a href="https://m3.material.io/styles/color/the-color-system">Material 3 Color System</a></p>
+            </section>
+            <section class="color-section light">
+                <h3>Light Color Schema</h3>
+                <div class="color-gallery" id="light-color-schema"></div>
+            </section>
+            <section class="color-section dark">
+                <h3>Dark Color Schema</h3>
+                <div class="color-gallery" id="dark-color-schema"></div>
+            </section>
         </section>
-        <section>
+        <section class="typography-section">
             <h2>Typography</h2>
-            <div id="typography-cards"></div>
+            <p>Learn more information about Material 3's Typography System here: <a href="https://m3.material.io/styles/typography/overview">Material 3 Typography System</a></p>
+            <div id="typo-gallery"></div>
         </section>
-        <section>
-            <h2>Wireframes</h2>
+        <section class="wireframe-section">
+            <h2>Wireframe</h2>
             <div class="wireframes">
                 <figure>
-                    <img src="#" alt="">
+                    <picture>
+                        <source srcset="images/home_page_mobile.webp" media="(max-width:600px)">
+                        <img src="images/home_page_desktop.webp" alt="Desktop wireframe of the home page, displaying the header, main content, and footer.">
+                    </picture>
                     <figcaption>Home Page Wireframe</figcaption>
-                </figure>
-                    <figure>
-                    <img src="#" alt="">
-                    <figcaption>Portfolio Wireframe</figcaption>
-                </figure>
-                    <figure>
-                    <img src="#" alt="">
-                    <figcaption>Contact Me Wireframe</figcaption>
                 </figure>
             </div>
         </section>
     </main>
-    <footer>
-
-    </footer>
 </body>
 </html>

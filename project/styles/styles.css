@@ -1,4 +1,5 @@
 :root {
+    color-scheme: light dark;
     --color-primary: light-dark(#3C6090, #A5C8FF);
     --color-surfaceTint: light-dark(#3C6090, #A5C8FF);
     --color-onPrimary: light-dark(#FFFFFF, #00315E);
@@ -57,12 +58,12 @@
     --font-body-large: 400 1rem/ 1.5rem Roboto;
     --font-body-medium: 400 .875rem/ 1.25rem Roboto;
     --font-body-small: 400 0.75rem/ 1rem Roboto;
-    --font-label-large: 500 .875rem/ 1.25rem Roboto;
-    --font-label-medium: 500 .75rem/ 1rem Roboto;
-    --font-label-small: 500 .6875rem/ 1rem Roboto;
+    --font-label-large: 600 .875rem/ 1.25rem Roboto;
+    --font-label-medium: 600 .75rem/ 1rem Roboto;
+    --font-label-small: 600 .6875rem/ 1rem Roboto;
     --font-title-large: 400 1.375rem/ 1.75rem Roboto;
-    --font-title-medium: 500 1rem/ 1.5rem Roboto;
-    --font-title-small: 500 .875rem/ 1.25rem Roboto;
+    --font-title-medium: 600 1rem/ 1.5rem Roboto;
+    --font-title-small: 600 .875rem/ 1.25rem Roboto;
     --font-display-large-tracking: -.015625rem;
     --font-display-medium-tracking: 0rem;
     --font-display-small-tracking: 0rem;
@@ -80,57 +81,110 @@
     --font-title-small-tracking: .00625rem;
 }
 
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-main{
-    display: flex;
-    flex-direction: column;
+body {
     width: 100%;
-    padding: 1rem;
+    background-color: var(--color-surface);
     color: var(--color-onSurface);
-    background-color: var(--color-background);
-    max-width: 100rem;
 }
 
-h1{
+main {
+    display: flex;
+    flex-direction: column;
+    color: var(--color-onSurface);
+    background-color: var(--color-background);
+    max-width: 100vw;
+}
+
+h1 {
     font: var(--font-display-large);
     letter-spacing: var(--font-display-large-tracking);
     width: 100%;
     margin: 0;
     color: var(--color-primary);
+    padding: .5rem 1rem;
 }
 
-h2{
+h2 {
     font: var(--font-headline-large);
     letter-spacing: var(--font-headline-large-tracking);
     width: 100%;
     margin: 0;
 }
 
-h3{
-    font: var(--font-headline-medium);
-    letter-spacing: var(--font-headline-medium-tracking);
-    width: 100%;
-    margin: 0;
-}
-
-h4{
+h3 {
     font: var(--font-headline-small);
     letter-spacing: var(--font-headline-small-tracking);
     width: 100%;
     margin: 0;
 }
 
-.color-schema{
+h4 {
+    font: var(--font-title-medium);
+    letter-spacing: var(--font-title-medium-tracking);
+    width: 100%;
+    margin: 0;
+}
+
+p {
+    font: var(--font-body-large);
+    letter-spacing: var(--font-body-large-tracking);
+    width: 100%;
+    margin: 0;
+}
+
+span {
+    font: var(--font-label-large);
+
+}
+
+li {
+    list-style-type: none;
+    font: var(--font-body-large);
+    letter-spacing: var(--font-body-large-tracking);
+}
+
+code {
+    font: var(--font-body-medium);
+    letter-spacing: var(--font-body-medium-tracking);
+    width: 100%;
+    margin: 0;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.light {
+    color-scheme: light;
+}
+
+.dark {
+    color-scheme: dark;
+}
+
+.info-section {
+    padding: 0.5rem 1rem;
+}
+
+.color-section {
+    background-color: var(--color-surface);
+    color: var(--color-onSurface);
+    padding: 0.5rem 1rem;
+}
+
+.color-schema {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
     width: 100%;
     color: var(--color-onSurface);
+    background-color: var(--color-surface);
 }
 
 .color-gallery {
@@ -151,7 +205,7 @@ h4{
     color: var(--color-onSurface);
 }
 
-.color-box{
+.color-box {
     width: 100%;
     height: 7.5rem;
     border-radius: 0.5rem;
@@ -162,14 +216,56 @@ h4{
     display: flex;
     flex-direction: column;
     width: 100%;
-    height:auto;
+    height: auto;
     gap: 0.25rem;
     padding: 0.25rem;
 }
 
-.color-description p{
+.color-description p {
     font: var(--font-body-medium);
     letter-spacing: var(--font-body-medium-tracking);
     width: 100%;
     margin: 0;
+}
+
+.typography-section {
+    background-color: var(--color-surface);
+    color: var(--color-onSurface);
+    padding: 0.5rem 1rem;
+}
+
+.typo-card h3 {
+    color: var(--color-primary);
+}
+
+#typo-gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+    padding: 0.5rem 0rem;
+}
+
+.typo-card {
+    border: 1px solid var(--color-outlineVariant);
+    border-radius: 0.5rem;
+    width: 14rem;
+    text-align: left;
+    padding: .5rem;
+    background-color: var(--color-surfaceContainerLow);
+    color: var(--color-onSurface);
+}
+
+.wireframe-section {
+    background-color: var(--color-surface);
+    color: var(--color-onSurface);
+    padding: 0.5rem 1rem;
+}
+
+.wireframes figcaption {
+    font: var(--font-title-large);
+    letter-spacing: var(--font-title-large-tracking);
+    padding: 0.5rem;
+    text-align: center;
 }

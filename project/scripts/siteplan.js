@@ -102,6 +102,24 @@ const colorSchemaDark = {
     "surfaceContainerHighest": "#32353A"
 }
 
+const typography = {
+    "displayLarge": { "fontFamily": "Roboto", "fontWeight": 400, "fontSize": "3.5625rem", "lineHeight": "4rem", "letterSpacing": "-.015625rem" },
+    "displayMedium": { "fontFamily": "Roboto", "fontWeight": 400, "fontSize": "2.8125rem", "lineHeight": "3.25rem", "letterSpacing": "0rem" },
+    "displaySmall": { "fontFamily": "Roboto", "fontWeight": 400, "fontSize": "2.25rem", "lineHeight": "2.75rem", "letterSpacing": "0rem" },
+    "headlineLarge": { "fontFamily": "Roboto", "fontWeight": 400, "fontSize": "2rem", "lineHeight": "2.5rem", "letterSpacing": "0rem" },
+    "headlineMedium": { "fontFamily": "Roboto", "fontWeight": 400, "fontSize": "1.75rem", "lineHeight": "2.25rem", "letterSpacing": "0rem" },
+    "headlineSmall": { "fontFamily": "Roboto", "fontWeight": 400, "fontSize": "1.5rem", "lineHeight": "2rem", "letterSpacing": "0rem" },
+    "bodyLarge": { "fontFamily": "Roboto", "fontWeight": 400, "fontSize": "1rem", "lineHeight": "1.5rem", "letterSpacing": ".03125rem" },
+    "bodyMedium": { "fontFamily": "Roboto", "fontWeight": 400, "fontSize": ".875rem", "lineHeight": "1.25rem", "letterSpacing": ".015625rem" },
+    "bodySmall": { "fontFamily": "Roboto", "fontWeight": 400, "fontSize": "0.75rem", "lineHeight": "1rem", "letterSpacing": ".025rem" },
+    "labelLarge": { "fontFamily": "Roboto", "fontWeight": 600, "fontSize": ".875rem", "lineHeight": "1.25rem", "letterSpacing": ".00625rem" },
+    "labelMedium": { "fontFamily": "Roboto", "fontWeight": 600, "fontSize": ".75rem", "lineHeight": "1rem", "letterSpacing": ".03125rem" },
+    "labelSmall": { "fontFamily": "Roboto", "fontWeight": 600, "fontSize": ".6875rem", "lineHeight": "1rem", "letterSpacing": ".03125rem" },
+    "titleLarge": { "fontFamily": "Roboto", "fontWeight": 400, "fontSize": "1.375rem", "lineHeight": "1.75rem", "letterSpacing": "0rem" },
+    "titleMedium": { "fontFamily": "Roboto", "fontWeight": 600, "fontSize": "1rem", "lineHeight": "1.5rem", "letterSpacing": ".009375rem" },
+    "titleSmall": { "fontFamily": "Roboto", "fontWeight": 600, "fontSize": ".875rem", "lineHeight": "1.25rem", "letterSpacing": ".00625rem" },
+};
+
 const lightModeColors = document.querySelector("#light-color-schema");
 const colorSchemaLightKeys = Object.keys(colorSchemaLight);
 
@@ -122,7 +140,7 @@ colorSchemaLightKeys.forEach(color => {
     const colorRole = document.createElement("h4");
     colorRole.textContent = color;
 
-    const colorValue = document.createElement("p");
+    const colorValue = document.createElement("code");
     colorValue.textContent = colorSchemaLight[color];
 
     lightModeColors.appendChild(card);
@@ -134,10 +152,10 @@ colorSchemaLightKeys.forEach(color => {
 
 colorSchemaDarkKeys.forEach(color => {
     const card = document.createElement("div");
-    card.className = 'color-card';
+    card.className = "color-card";
 
     const colorBox = document.createElement("div");
-    colorBox.className = 'color-box';
+    colorBox.className = "color-box";
     colorBox.style.backgroundColor = colorSchemaDark[color];
 
     const description = document.createElement("div");
@@ -154,4 +172,28 @@ colorSchemaDarkKeys.forEach(color => {
     card.appendChild(description);
     description.appendChild(colorRole);
     description.appendChild(colorValue);
+})
+
+const typographyCards = document.querySelector("#typo-gallery");
+const typographyKeys = Object.keys(typography);
+
+typographyKeys.forEach(typo => {
+    const typoValues = typography[typo];
+    const typoKeys = Object.keys(typoValues);
+
+    const card = document.createElement("div");
+    card.className = "typo-card";
+    typographyCards.appendChild(card);
+
+    const typoName = document.createElement("h3");
+    typoName.textContent = typo;
+    card.appendChild(typoName);
+
+    typoKeys.forEach(value => {
+        console.log(value);
+        const details = document.createElement("p");
+        details.innerHTML = `<span>${value}:</span> ${typoValues[value]}`;
+
+        card.appendChild(details);
+    })
 })
