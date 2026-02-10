@@ -101,3 +101,57 @@ const colorSchemaDark = {
     "surfaceContainerHigh": "#282A2F",
     "surfaceContainerHighest": "#32353A"
 }
+
+const lightModeColors = document.querySelector("#light-color-schema");
+const colorSchemaLightKeys = Object.keys(colorSchemaLight);
+
+const darkModeColors = document.querySelector("#dark-color-schema");
+const colorSchemaDarkKeys = Object.keys(colorSchemaDark);
+
+colorSchemaLightKeys.forEach(color => {
+    const card = document.createElement("div");
+    card.className = 'color-card';
+
+    const colorBox = document.createElement("div");
+    colorBox.className = 'color-box';
+    colorBox.style.backgroundColor = colorSchemaLight[color];
+
+    const description = document.createElement("div");
+    description.className = "color-description";
+
+    const colorRole = document.createElement("h4");
+    colorRole.textContent = color;
+
+    const colorValue = document.createElement("p");
+    colorValue.textContent = colorSchemaLight[color];
+
+    lightModeColors.appendChild(card);
+    card.appendChild(colorBox);
+    card.appendChild(description);
+    description.appendChild(colorRole);
+    description.appendChild(colorValue);
+})
+
+colorSchemaDarkKeys.forEach(color => {
+    const card = document.createElement("div");
+    card.className = 'color-card';
+
+    const colorBox = document.createElement("div");
+    colorBox.className = 'color-box';
+    colorBox.style.backgroundColor = colorSchemaDark[color];
+
+    const description = document.createElement("div");
+    description.className = "color-description";
+
+    const colorRole = document.createElement("h4");
+    colorRole.textContent = color;
+
+    const colorValue = document.createElement("p");
+    colorValue.textContent = colorSchemaDark[color];
+
+    darkModeColors.appendChild(card);
+    card.appendChild(colorBox);
+    card.appendChild(description);
+    description.appendChild(colorRole);
+    description.appendChild(colorValue);
+})

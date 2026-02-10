@@ -63,7 +63,7 @@
     --font-title-large: 400 1.375rem/ 1.75rem Roboto;
     --font-title-medium: 500 1rem/ 1.5rem Roboto;
     --font-title-small: 500 .875rem/ 1.25rem Roboto;
-    --font-display-large-tracking: -015625rem;
+    --font-display-large-tracking: -.015625rem;
     --font-display-medium-tracking: 0rem;
     --font-display-small-tracking: 0rem;
     --font-headline-large-tracking: 0rem;
@@ -78,4 +78,98 @@
     --font-title-large-tracking: 0rem;
     --font-title-medium-tracking: .009375rem;
     --font-title-small-tracking: .00625rem;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem;
+    color: var(--color-onSurface);
+    background-color: var(--color-background);
+    max-width: 100rem;
+}
+
+h1{
+    font: var(--font-display-large);
+    letter-spacing: var(--font-display-large-tracking);
+    width: 100%;
+    margin: 0;
+    color: var(--color-primary);
+}
+
+h2{
+    font: var(--font-headline-large);
+    letter-spacing: var(--font-headline-large-tracking);
+    width: 100%;
+    margin: 0;
+}
+
+h3{
+    font: var(--font-headline-medium);
+    letter-spacing: var(--font-headline-medium-tracking);
+    width: 100%;
+    margin: 0;
+}
+
+h4{
+    font: var(--font-headline-small);
+    letter-spacing: var(--font-headline-small-tracking);
+    width: 100%;
+    margin: 0;
+}
+
+.color-schema{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    color: var(--color-onSurface);
+}
+
+.color-gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+}
+
+.color-card {
+    border: 1px solid var(--color-outlineVariant);
+    border-radius: 0.5rem;
+    width: 14rem;
+    text-align: left;
+    padding: 0.25rem;
+    background-color: var(--color-surfaceContainerLow);
+    color: var(--color-onSurface);
+}
+
+.color-box{
+    width: 100%;
+    height: 7.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--color-outlineVariant);
+}
+
+.color-description {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height:auto;
+    gap: 0.25rem;
+    padding: 0.25rem;
+}
+
+.color-description p{
+    font: var(--font-body-medium);
+    letter-spacing: var(--font-body-medium-tracking);
+    width: 100%;
+    margin: 0;
 }
