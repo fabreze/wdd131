@@ -124,8 +124,28 @@ h3 {
     margin: 0;
 }
 
+h4 {
+    font: var(--font-title-medium);
+    letter-spacing: var(--font-title-medium-tracking);
+    width: 100%;
+    margin: 0;
+}
+
+p {
+    font: var(--font-body-large);
+    letter-spacing: var(--font-body-large-tracking);
+    width: 100%;
+    margin: 0;
+}
+
 span {
     font: var(--font-label-large);
+}
+
+li {
+    list-style-type: none;
+    font: var(--font-body-large);
+    letter-spacing: var(--font-body-large-tracking);
 }
 
 code {
@@ -152,37 +172,10 @@ img {
     padding: 0.5rem 1rem;
 }
 
-.info-section p {
-    font: var(--font-body-large);
-    letter-spacing: var(--font-body-large-tracking);
-    width: 100%;
-    margin: 0;
-}
-
-.info-section li {
-    list-style-type: none;
-    font: var(--font-body-large);
-    letter-spacing: var(--font-body-large-tracking);
-}
-
 .color-section {
     background-color: var(--color-surface);
     color: var(--color-onSurface);
     padding: 0.5rem 1rem;
-}
-
-.color-section p {
-    font: var(--font-body-large);
-    letter-spacing: var(--font-body-large-tracking);
-    width: 100%;
-    margin: 0;
-}
-
-.color-section h4 {
-    font: var(--font-title-medium);
-    letter-spacing: var(--font-title-medium-tracking);
-    width: 100%;
-    margin: 0;
 }
 
 .color-schema {
