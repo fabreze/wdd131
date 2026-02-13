@@ -71,7 +71,10 @@ body {
 }
 
 header {
-    background: none;
+    background-color: var(--color-primary);
+    color: var(--color-onPrimary);
+    text-align: center;
+    padding: 1rem;
 }
 
 #course-title {

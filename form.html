@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A product review form that allows users to submit their feedback on a product, including overall rating, installation date, useful features, and a written review.">
+    <meta name="author" content="Fabrizio Caballero">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/form.js" defer></script>
+    <title>Product Review Form</title>
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <main class="product-review">
+        <form method="get" action="review.html">
+            <fieldset>
+                <div class="form-item">
+                    <p>Product Name</p>
+                    <select id="products" name="product name" required>
+                        <option value="" disabled selected>Select a product...</option>
+                    </select>
+                </div>
+                <div class="form-item">
+                    <p>Overall Rating</p>
+                    <label><input id="onestar" type="radio" name="rating" value="1 Star" required>★</label>
+                    <label><input id="twostar" type="radio" name="rating" value="2 Stars" required>★★</label>
+                    <label><input id="threestar" type="radio" name="rating" value="3 Stars" required>★★★</label>
+                    <label><input id="fourstar" type="radio" name="rating" value="4 Stars" required>★★★★</label>
+                    <label><input id="fivestar" type="radio" name="rating" value="5 Stars" required>★★★★★</label>
+                </div>
+                <div class="form-item">
+                    <p>Date of Installation</p>
+                    <input id="installation-date" type="date" name="installation date" required>
+                </div>
+                <div class="form-item">
+                    <p>Which features did you find useful in the product?</p>
+                    <p>(check all that apply)</p>
+                    <label><input id="durability" type="checkbox" name="feature" required>Durability</label>
+                    <label><input id="ease-of-use" type="checkbox" name="feature" required>Ease of Use</label>
+                    <label><input id="performance" type="checkbox" name="feature" required>Performance</label>
+                    <label><input id="design" type="checkbox" name="feature" required>Design</label>
+                </div>
+                <div class="form-item">
+                    <p>Written Review<label>(Optional)</label></p>
+                    <textarea id="written-review" name="written review"></textarea>
+                </div>
+                <div class="form-item">
+                    <p>Your name<label>(Optional)</label></p>
+                    <input id="your-name" type="text" name="your name">
+                </div>
+                <button id="submit-review" type="submit">Submit Review</button>
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+        <p><span id="currentYear"></span> Fabrizio Caballero, Paraguay</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

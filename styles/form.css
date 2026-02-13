@@ -1,0 +1,56 @@
+.product-review{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: fit-content;
+}
+form{
+    padding: 1rem;
+}
+
+fieldset{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+select,
+textarea,
+input[type="text"],
+input[type="date"]{
+    padding: 0.5rem;
+    border: 1px solid #000;
+    border-radius: 4px;
+    width: 100%;
+    resize: vertical;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+button{
+    position: relative;
+    padding: 0.5rem 1rem;
+    background-color: #2D628C;
+    color: #fff;
+    border: none;
+    border-radius: 9999px;
+    cursor: pointer;
+    max-width: fit-content;
+}
+
+.form-item{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.list-item
+{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
