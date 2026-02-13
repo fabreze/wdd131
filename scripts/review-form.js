@@ -1,0 +1,2 @@
+const displayReviewsCompleted = document.querySelector("#reviews-completed");
+displayReviewsCompleted.textContent = `Thanks for your review! This is review number ${localStorage.getItem("reviewsCompleted")}`;

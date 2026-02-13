@@ -27,7 +27,6 @@ const products = [
 ];
 const reviewsCompleted = localStorage.setItem("reviewsCompleted", "0");
 const submitButton =  document.querySelector("#submit-review");
-const displayReviewsCompleted = document.querySelector("#reviews-completed");
 const productSelect = document.querySelector("#products");
 
 
@@ -35,7 +34,6 @@ submitButton.addEventListener("click", function() {
   let reviewsCompleted = parseInt(localStorage.getItem("reviewsCompleted"));
   reviewsCompleted++;
   localStorage.setItem("reviewsCompleted", reviewsCompleted.toString());
-  displayReviewsCompleted.textContent = `Thanks for your review! This is the ${reviewsCompleted} review you've submitted.`;
 });
 
 products.forEach(product => {
