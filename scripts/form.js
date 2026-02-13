@@ -29,7 +29,7 @@ const reviewsCompleted = localStorage.setItem("reviewsCompleted", "0");
 const submitButton =  document.querySelector("#submit-review");
 const displayReviewsCompleted = document.querySelector("#reviews-completed");
 const productSelect = document.querySelector("#products");
-const reviewForm = document.querySelector("#review-form");
+
 
 submitButton.addEventListener("click", function() {
   let reviewsCompleted = parseInt(localStorage.getItem("reviewsCompleted"));
