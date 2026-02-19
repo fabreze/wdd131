@@ -38,3 +38,17 @@
     border-radius: inherit;
     margin: 2rem;
 }
+
+@media screen and (max-width: 768px) {
+    .welcome-section{
+        grid-template-columns: 1fr;
+        height: fit-content;
+    }
+    .title-container {
+        align-items: center;
+        text-align: center;
+    }
+    .button-container {
+        justify-content: center;
+    }
+}
