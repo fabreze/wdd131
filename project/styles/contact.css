@@ -5,7 +5,7 @@
     height: fit-content;
     justify-content: center;
     align-items: center;
-    background-image: radial-gradient(circle, var(--color-onPrimaryFixed), var(--color-surface));
+    background-image: radial-gradient(circle, var(--color-onPrimary), var(--color-surface));
     padding: 4rem;
 }
 
