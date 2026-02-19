@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio page showcasing Fabrizio's work as a UX/UI designer">
+    <meta name="description" content="Contact page for Fabrizio Caballero, a UX/UI designer, providing contact information and a form for inquiries">
     <meta name="author" content="Fabrizio Caballero">
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="styles/portfolio.css">
-    <script src="scripts/porfolio.js" defer></script>
+    <link rel="stylesheet" href="styles/contact.css">
     <script src="../scripts/getdates.js" defer></script>
-    <title>Portfolio</title>
+    <script src="scripts/contact.js" defer></script>
+    <title>Contact Me</title>
 </head>
 <body>
     <header>
@@ -27,8 +27,25 @@
         </nav>
     </header>
     <main>
-        <section class="portfolio-container">
-            
+        <section class="contact-container">
+            <form>
+                <fieldset>
+                    <legend>Send me an email!</legend>
+                    <div class="field">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="field">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="field">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button id="contact-button" class="primary-button" type="submit">Get in contact</button>
+                </fieldset>
+            </form>
         </section>
     </main>
     <footer>

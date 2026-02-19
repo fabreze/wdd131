@@ -8,7 +8,7 @@ const portfolio = [
         {
             "title": "ReplyFriend",
             "description": "ReplyFriend is an AI-powered email assistant that helps users manage their inbox more efficiently. I was reponsible for conducting user research and helping build the foundations of the product, from personas, journey maps, wireframes to branding.",
-            "image": "replyfriend.webp",
+            "image": "reply-friend.webp",
             "link": "https://docs.google.com/presentation/d/17nUJ6GEmvFFM8GMhenO3ZNjx1-SyPTTvOrUSS15VUZk/edit?usp=sharing"
         },
         {
@@ -19,41 +19,50 @@ const portfolio = [
         }
     ];
 
-const portfolioContainer = document.getElementById('portfolio-container');
+generatePortfolio();
 
-portfolio.forEach(project => {
-    const projectCard = document.createElement('div');
-    projectCard.classList.add('portfolio-card');
+function generatePortfolio() {
+    const portfolioContainer = document.querySelector('.portfolio-container');
+    
+    portfolio.forEach(project => {
+        const projectCard = document.createElement('div');
+        projectCard.classList.add('portfolio-card');
 
-    const projectCardSection = document.createElement('div');
-    projectCardSection.classList.add('portfolio-card-section');
+        const projectCardSection = document.createElement('div');
+        projectCardSection.classList.add('portfolio-card-section');
 
-    const projectImageSection = document.createElement('div');
-    projectImageSection.classList.add('portfolio-card-image-section');
+        const projectImageSection = document.createElement('div');
+        projectImageSection.classList.add('portfolio-card-image-section');
 
-    const projectTitle = document.createElement('h2');
-    projectTitle.textContent = project.title;
+        const projectTitle = document.createElement('h2');
+        projectTitle.textContent = project.title;
 
-    const projectDescription = document.createElement('p');
-    projectDescription.textContent = project.description;
+        const projectDescription = document.createElement('p');
+        projectDescription.textContent = project.description;
 
-    const projectImage = document.createElement('img');
-    projectImage.src = `images/${project.image}`;
-    projectImage.alt = `preview image of ${project.title}`;
-    projectImage.loading = 'lazy';
+        const projectImage = document.createElement('img');
+        projectImage.src = `images/${project.image}`;
+        projectImage.alt = `preview image of ${project.title}`;
+        projectImage.loading = 'lazy';
 
-    const projectLinkButton = document.createElement('button');
-    projectLinkButton.textContent = 'View Project';
-    projectLinkButton.classList.add('tonal-button');
+        const actionContainer = document.createElement('div');
+        actionContainer.classList.add('action-container');
 
-    projectLinkButton.addEventListener('click', () => {
-        window.open(project.link, '_blank');
-    });
-    portfolioContainer.appendChild(projectCard);
-    projectCard.appendChild(projectCardSection);
-    projectCardSection.appendChild(projectTitle);
-    projectCardSection.appendChild(projectDescription);
-    projectCardSection.appendChild(projectLinkButton);
-    projectCard.appendChild(projectImageSection);
-    projectImageSection.appendChild(projectImage);
-})
+        const projectLinkButton = document.createElement('button');
+        projectLinkButton.textContent = 'View Project';
+        projectLinkButton.classList.add('tonal-button');
+
+        projectLinkButton.addEventListener('click', () => {
+            window.open(project.link, '_blank');
+        });
+
+        projectCardSection.appendChild(projectTitle);
+        projectCardSection.appendChild(projectDescription);
+        projectCardSection.appendChild(actionContainer);
+        actionContainer.appendChild(projectLinkButton);
+        projectImageSection.appendChild(projectImage);
+        projectCard.appendChild(projectCardSection);
+        projectCard.appendChild(projectImageSection);
+        portfolioContainer.appendChild(projectCard);
+    })
+}
