@@ -91,6 +91,7 @@ body {
     width: 100%;
     background-color: var(--color-surface);
     color: var(--color-onSurface);
+    overflow-x: hidden;
 }
 
 main {
@@ -115,6 +116,7 @@ h2 {
     letter-spacing: var(--font-headline-large-tracking);
     width: 100%;
     margin: 0;
+    padding: .5rem 1rem;
 }
 
 h3 {
@@ -122,6 +124,7 @@ h3 {
     letter-spacing: var(--font-headline-small-tracking);
     width: 100%;
     margin: 0;
+    padding: .5rem 1rem;
 }
 
 h4 {
@@ -129,6 +132,7 @@ h4 {
     letter-spacing: var(--font-title-medium-tracking);
     width: 100%;
     margin: 0;
+    padding: .5rem 1rem;
 }
 
 p {
@@ -136,6 +140,7 @@ p {
     letter-spacing: var(--font-body-large-tracking);
     width: 100%;
     margin: 0;
+    padding: .5rem 1rem;
 }
 
 span {
@@ -160,6 +165,102 @@ img {
     height: auto;
 }
 
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: end;
+    padding: 1rem;
+}
+
+.logo {
+    width: 3.5rem;
+    height: auto;
+    margin-right: 1rem;
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    gap: 2rem;
+}
+
+li a{
+    color: var(--color-onSurface);
+    text-decoration: none;
+}
+
+li a:hover{
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+button{
+    max-width: fit-content;
+    position: relative;
+    max-height: fit-content;
+    border: none;
+    border-radius: 1rem;
+    padding: .5rem 1rem;
+    font: var(--font-label-large);
+    letter-spacing: var(--font-label-large-tracking);
+    cursor: pointer;
+    flex: 1 0 0;
+    line-height: 1.5rem;
+}
+
+button:hover::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    opacity: .08;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+button a{
+    text-decoration: none;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--color-surfaceContainer);
+}
+
+.primary-button{
+    background-color: var(--color-primary);
+}
+
+.primary-button a{
+    color: var(--color-onPrimary);
+}
+
+.primary-button:hover::after{
+    background-color: var(--color-onPrimary);
+}
+
+.tonal-button{
+    background-color: var(--color-secondaryContainer);
+}
+
+.tonal-button a{
+    color: var(--color-onSecondaryContainer);
+}
+
+.tonal-button:hover::after{
+    background-color: var(--color-onSecondaryContainer);
+}
+
 .light {
     color-scheme: light;
 }
@@ -168,103 +269,3 @@ img {
     color-scheme: dark;
 }
 
-.info-section {
-    padding: 0.5rem 1rem;
-}
-
-.color-section {
-    background-color: var(--color-surface);
-    color: var(--color-onSurface);
-    padding: 0.5rem 1rem;
-}
-
-.color-schema {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    color: var(--color-onSurface);
-    background-color: var(--color-surface);
-}
-
-.color-gallery {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 1rem;
-    width: 100%;
-}
-
-.color-card {
-    border: 1px solid var(--color-outlineVariant);
-    border-radius: 0.5rem;
-    width: 14rem;
-    text-align: left;
-    padding: 0.25rem;
-    background-color: var(--color-surfaceContainerLow);
-    color: var(--color-onSurface);
-}
-
-.color-box {
-    width: 100%;
-    height: 7.5rem;
-    border-radius: 0.5rem;
-    border: 1px solid var(--color-outlineVariant);
-}
-
-.color-description {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: auto;
-    gap: 0.25rem;
-    padding: 0.25rem;
-}
-
-.color-description p {
-    font: var(--font-body-medium);
-    letter-spacing: var(--font-body-medium-tracking);
-    width: 100%;
-    margin: 0;
-}
-
-.typography-section {
-    background-color: var(--color-surface);
-    color: var(--color-onSurface);
-    padding: 0.5rem 1rem;
-}
-
-.typo-card h3 {
-    color: var(--color-primary);
-}
-
-#typo-gallery {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 1rem;
-    width: 100%;
-    padding: 0.5rem 0rem;
-}
-
-.typo-card {
-    border: 1px solid var(--color-outlineVariant);
-    border-radius: 0.5rem;
-    width: 14rem;
-    text-align: left;
-    padding: .5rem;
-    background-color: var(--color-surfaceContainerLow);
-    color: var(--color-onSurface);
-}
-
-.wireframe-section {
-    background-color: var(--color-surface);
-    color: var(--color-onSurface);
-    padding: 0.5rem 1rem;
-}
-
-.wireframes figcaption {
-    font: var(--font-title-large);
-    letter-spacing: var(--font-title-large-tracking);
-    padding: 0.5rem;
-    text-align: center;
-}

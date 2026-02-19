@@ -1,0 +1,40 @@
+.welcome-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+    width: 100vw;
+    background-image: radial-gradient(circle, var(--color-onPrimaryFixed), var(--color-surface));
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    text-align: left;
+    width: 100%;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    gap: 1rem;
+    padding: 1rem;
+    width: 100%;
+}
+
+.image-container {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    border-radius: 1rem;
+    width: 100%;
+}
+
+.image-container img {
+    width: 80%;
+    height: auto;
+    border-radius: inherit;
+    margin: 2rem;
+}

@@ -1,0 +1,100 @@
+.info-section {
+    padding: 0.5rem 1rem;
+}
+
+.color-section {
+    background-color: var(--color-surface);
+    color: var(--color-onSurface);
+    padding: 0.5rem 1rem;
+}
+
+.color-schema {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: var(--color-onSurface);
+    background-color: var(--color-surface);
+}
+
+.color-gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+}
+
+.color-card {
+    border: 1px solid var(--color-outlineVariant);
+    border-radius: 0.5rem;
+    width: 14rem;
+    text-align: left;
+    padding: 0.25rem;
+    background-color: var(--color-surfaceContainerLow);
+    color: var(--color-onSurface);
+}
+
+.color-box {
+    width: 100%;
+    height: 7.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--color-outlineVariant);
+}
+
+.color-description {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 0.25rem;
+    padding: 0.25rem;
+}
+
+.color-description p {
+    font: var(--font-body-medium);
+    letter-spacing: var(--font-body-medium-tracking);
+    width: 100%;
+    margin: 0;
+}
+
+.typography-section {
+    background-color: var(--color-surface);
+    color: var(--color-onSurface);
+    padding: 0.5rem 1rem;
+}
+
+.typo-card h3 {
+    color: var(--color-primary);
+}
+
+#typo-gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+    padding: 0.5rem 0rem;
+}
+
+.typo-card {
+    border: 1px solid var(--color-outlineVariant);
+    border-radius: 0.5rem;
+    width: 14rem;
+    text-align: left;
+    padding: .5rem;
+    background-color: var(--color-surfaceContainerLow);
+    color: var(--color-onSurface);
+}
+
+.wireframe-section {
+    background-color: var(--color-surface);
+    color: var(--color-onSurface);
+    padding: 0.5rem 1rem;
+}
+
+.wireframes figcaption {
+    font: var(--font-title-large);
+    letter-spacing: var(--font-title-large-tracking);
+    padding: 0.5rem;
+    text-align: center;
+}
