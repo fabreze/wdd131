@@ -1,9 +1,9 @@
 const portfolio = [
         {
             "title": "Certiverse",
-            "description": "Certiverse is an online platform that offers a wide range of IT certification exams. I was responsible for the redesign of the homepage, which resulted in a 20% increase in user engagement and a 15% increase in conversion rates.",
+            "description": "Certiverse is an online platform that offers a wide range of IT certification exams. I was responsible for implementing a new design system that improved platform usability and accessbility.",
             "image": "certiverse.webp",
-            "link": "https://www.figma.com/proto/ONzvU3kfw00OMl3ZWIGr76/Test-Creator-Home-Page?node-id=132-3261&p=f&t=FSXkF2qOfO9eKPIL-1&scaling=contain&content-scaling=fixed&page-id=132%3A29"
+            "link": "https://www.figma.com/design/xnzEqcOlGhpoODALy4dkac/Component-Library--Test-Development-?node-id=11-95&t=xZwnwiT3lv0DvMlx-1"
         },
         {
             "title": "ReplyFriend",
